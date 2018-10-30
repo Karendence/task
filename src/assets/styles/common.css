@@ -1,0 +1,271 @@
+
+.error {
+	color:red!important;
+}
+.redColor{
+	color:red;
+}
+.lbl-require{
+	color:red;
+	margin:0px 3px;
+	vertical-align: middle;
+}
+.navbar-brand{
+	background: url("../images/alert_logo.png") no-repeat;
+	background-size: contain;
+    width: 87px;
+    height: 40px;
+    margin: 20px 20px 0 20px;
+}
+.logo{
+	background: url("../images/logo_oneapm.png") no-repeat;
+	width:63px;
+	height: 40px;    
+	margin: 5px 0px 0 25px;
+}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover {
+    border-bottom:0px solid transparent;
+    /*color: #25c151;*/
+    background-color: transparent;
+}
+a.active {
+	color: #25c151!important;
+}
+#top_nav > li > a{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.light-black {
+	color:#474444;
+}
+.closed-green ,.closed-green:hover {
+	color:#66CC00 !important;
+	cursor:not-allowed !important;
+}
+.acked , .acked:hover {
+	color:#42A8EF !important;
+	cursor:not-allowed !important;
+}
+.fa-small {
+	font-size: 12px;
+	transform:scale(0.5);
+	margin-right: 10px;
+}
+.warn-waiting{
+	color:#FE3B39;
+}
+.warn-doing{
+	color:#EE7841;
+}
+.warn-done{
+	color:#62BA04;
+}
+.warn-important {
+	background-color:#ff3a3a;
+	color:white;
+}
+.warn-important.active,.warn-important:hover ,.warn-important:focus,.warn-important:visited {
+	background-color:#e53434;
+	color:white;
+}
+.warn-warned {
+	background-color:#ef7742;
+	color:white;
+}
+.warn-warned.active,.warn-warned:hover ,.warn-warned:focus,.warn-warned:visited {
+	background-color:#d76b3b;
+	color:white;
+}
+.warn-alert {
+	background-color:#42a8ef;
+	color:white;
+}
+.warn-alert.active, .warn-alert:hover ,.warn-alert:focus,.warn-alert:visited {
+	background-color:#3b97d7;
+	color:white;
+}
+.wechat {
+	position:fixed;
+	top:455px;
+	left:10px;
+	width:160px;
+	height:155px;
+	background:url('../images/wechat.png') no-repeat;
+}
+.wechat span {
+	position: relative;
+    top: 106px;
+    left: 10px;
+    color: white;
+}
+.content{
+	padding:0 5px;
+}
+.leftContent{
+	background-color:#ffffff;
+	overflow:hidden;
+	border: 1px solid #d9d9d9;
+	min-height:493px;
+}
+.rightAside{
+	background-color:#f9f9f9;
+	min-height:510px; 
+	min-width:250px;
+	padding:55px 10px;
+	border:1px solid #d9d9d9;
+}
+.img-responsive{
+	margin:0 auto;
+}
+.rightAsideContent.img-responsive{
+	padding-bottom:30px;
+}
+.rightAsideContent p{
+	padding:20px;
+}
+.rightAsideContent ul{
+	padding:0 20px;
+}
+.rightAsideContent ul li{
+	font-size:12px;	
+}
+.rightAsideContent ul li span{
+	display:block;
+	color:#999999;
+	padding-top:5px;
+	padding-bottom:10px;
+}
+
+input.error,button.error,select.error,div.error { 
+	border: 1px solid red; 
+}
+.nodata-p{
+	margin-left:10px;
+	color:red;
+	font-size:16px;
+}
+.pos-relative{
+	position:relative
+}
+.dis-inlineBlock{
+	display:inline-block;
+	vertical-align:top;
+}
+.no-outline, .no-outline:focus, .no-outline:hover{
+	outline:none;
+}
+.curs-pointer{
+	cursor:pointer;
+}
+/* 工具条中操作按钮 */
+.btn-banner-oper{
+	line-height:19px;
+	padding: 0 12px;
+}
+/*红色超链接 */
+.btn-red-link:link, .btn-red-link:visited {
+    color: #e66b19;
+    text-decoration: none;
+    outline: none;
+}
+/*蓝色超链接 */
+.btn-blue-link:link, .btn-blue-link:visited {
+    color: #30b0e7;
+    text-decoration: none;
+    outline: none;
+}
+/*绿色超链接 */
+.btn-green-link:link, .btn-green-link:visited{
+	color: #62ba04;
+	text-decoration:none;
+	outline:none;
+}
+.btn-green-link:hover {
+	color: #54A003;
+	text-decoration:none;
+	outline:none;
+}
+.btn-green-link:active {
+	color: #62ba04;
+	text-decoration:none;
+	outline:none;
+}	
+/* 灰色操作链接 */
+.grey {
+	color:#B3B2B2;
+	cursor:pointer;
+}
+.grey:hover {
+	color:#474444;
+}
+/*灰色取消按钮 */
+.btn-gray-cancel, .btn-gray-cancel:link, .btn-gray-cancel:visited{
+	background-color: #999999;
+	color:#ffffff;
+}
+.btn-gray-cancel:hover{
+	background-color: #666666;
+	color:#ffffff;
+}
+.btn-gray-cancel:active {
+	background-color: #999999;
+	color:#ffffff;
+}
+/* 绿色操作按钮 */
+.btn-success, .btn-success:link, .btn-success:visited{
+	background-color: #98CF4D;
+	color:#ffffff;
+	border-color:#98CF4D;
+}
+.btn-success:hover{
+	background-color: #6CBA00;
+	color:#ffffff;
+	border-color:#6CBA00;
+}
+.btn-success:active {
+	background-color: #98CF4D;
+	color:#ffffff;
+	border-color:#98CF4D;
+}
+/* 红色操作按钮 */
+.btn-redDel, .btn-redDel:link, .btn-redDel:visited{
+	background-color: #F77371;
+	color:#ffffff;
+	border-color:#F77371;
+}
+.btn-redDel:hover{
+	background-color: #F43733;
+	color:#ffffff;
+	border-color:#F43733;
+}
+.btn-redDel:active {
+	background-color: #F77371;
+	color:#ffffff;
+	border-color:#F77371;
+}
+/*小按钮*/
+.btn-mini{
+	height:28px;
+	line-height:26px;
+	padding:0 10px;
+}
+/*浅色描述字体颜色 */
+.colorDes{
+	color:#9C9C9C;
+}
+/*绿色字体 */
+.colorGreen{
+	color:#62BA04;
+}
+.divider {
+    height: 0px;
+    overflow: hidden;
+    background-color: #1B2633;
+}
+.alarm_active , .alarm_ack , .alarm_closed, .alarm_resolved, .my_situation_num, .all_situation_num{
+    float: right;
+    border-radius:4px;
+    padding: 0px 10px;
+    background-color:#18232F;
+    border: 1px solid #25c151;
+}

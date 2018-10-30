@@ -1,0 +1,24 @@
+.owmMulti{
+	display:inline-block;
+}
+.owmMulti .btn-group{
+	width:100%;
+}
+.owmMulti .multiselect {
+	width:100%;
+	text-align:right;
+	margin-top:0;
+}
+.owmMulti ul {
+	width:100%;
+}
+.owmMulti .multiselect-selected-text {
+	position:absolute;
+	left:0;
+	right:25px;
+	text-align:left;
+	padding-left:20px;
+}
+.owmMulti .multiselect-container li.odd {
+    background: #eeeeee;
+}

@@ -1,0 +1,170 @@
+.div-progress-out{
+	position:relative;
+}
+#span-userVersion{
+	border-bottom: 2px solid #62ba04;
+	padding-bottom:3px;
+}
+#div-user-version{
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+	width: 436px;
+	background-color: rgba(255, 255, 255, 1);
+	position:absolute;
+	right:115px;
+	padding:20px;
+}
+.div-inner-quota>.p-quota-title{
+	display:none;
+}
+#div-user-version>h3{
+	color: #434343;
+	font-weight: 700;
+	font-size:14px;
+	margin-top:0px;
+}
+#div-user-version>h4{
+	color: #434343;
+	font-weight: 400;
+	margin:0;
+	font-size:14px;
+	margin-bottom:10px;
+}
+#div-a-btns>span, #div-user-version>span{
+	color: #868686;
+	font-weight: 400;
+	display:inline-block;
+	margin-bottom:35px;
+}
+#div-version-btns>span{
+	padding: 0 3px; 
+}
+.div-inner-quota{
+	margin-bottom: 40px;
+	padding-left:35px;
+}
+.div-progress-out:first-child{
+	padding-top: 0px;
+}
+.div-line{
+	border-top:1px solid #D7D7D7;
+	margin-bottom:15px;
+}
+.margin-l35{
+	margin-left:35px;
+}
+.a-active{
+	background-color:#000;
+	color:#fff;
+}
+#div-a-btns{
+	padding-top:8px;
+	display:inline-block;
+}
+
+
+
+/*横向公告栏*/
+.notice-content {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+}
+.notice-text {
+     color: #e66b19;
+     font-size: 14px;
+     position: absolute;
+}
+
+.nav-news{ 
+	position: relative;
+    float: left;
+    margin-top: -41px;
+    margin-left: 266px;
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    font-size: 14px;
+} 
+#del-confirm-dialog>.modal-dialog{
+	    padding-top: 150px;
+}
+
+/*上下滚动公告栏样式--start*/
+ul, li {
+	list-style: none;
+}
+.vertical-notice { 
+	height: 60px; 
+	overflow: hidden; 
+	width: 600px;
+	display: inline-block;
+} 
+.vertical-notice ul {
+	width: 100%;
+}
+.vertical-notice li {
+	height: 60px; 
+	line-height: 60px;
+	width: 100%;
+	color: #e66b19;
+    font-size: 14px;
+}
+/*上下滚动公告栏样式--end*/
+
+/*系统升级提示框--start*/
+.system_upgrade_notice {
+    left: 17px;
+    z-index: 999;
+    width: 321px;
+    height: 200px;
+    position: fixed;
+    bottom: 10px;
+    display: none;
+}
+.system_upgrade_notice > div {
+	border: 1px solid #f0d9a6;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+}
+.s_notice_header {
+    padding: 10px;
+    border-bottom: 1px solid #f0d9a6;
+    background-color: #fee9d1;
+    position: relative;
+    font-size: 14px;
+    color: #aa4f18;
+}
+.s_notice_content {
+	border-bottom: #f0d9a6 1px solid;
+    padding: 12px;
+    background-color: #fff6eb;
+    min-height: 158px;
+}
+.s_notice_content ul {
+	margin-top: 10px;
+}
+.s_notice_content ul, .s_notice_content li{
+	list-style: decimal!important;
+}
+.close_s_notice {
+	cursor: pointer;
+	float: right;
+}
+.close_s_notice:hover,
+.s_never_notice:hover {
+	opacity: 0.5;
+}
+.s_never_notice {
+	text-align: right;
+    bottom: 12px;
+    position: absolute;
+    right: 12px;
+    color: #aa4f18;
+    cursor: pointer;
+}
+/*系统升级提示框--end*/
