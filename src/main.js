@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 import common from './components/Common.vue'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+// Vue.use(iView);
 Vue.prototype.COMMON = common
 /* eslint-disable no-new */
 new Vue({
