@@ -7,12 +7,20 @@
 </template>
 
 <script>
+import {
+    Breadcrumb,
+    BreadcrumbItem
+} from 'iview'
 export default {
-  name: 'Breadcrumb',
+  name: 'Mybreadcrumb',
   data () {
     return {
       msg: ''
     }
+  },
+  components: {
+    Breadcrumb,
+    BreadcrumbItem
   }
 }
 </script>
