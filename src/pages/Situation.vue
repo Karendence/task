@@ -8,18 +8,7 @@
     </Mycrumb>
     <div class="main-list">
       <div class="search-result">
-        <MyTable>
-          <template slot="th">
-            <th>场景编号</th>
-            <th>描述</th>
-            <th>优先级</th>
-            <th>影响服务</th>
-            <th>生成时间</th>
-            <th>告警数量</th>
-            <th>分派人</th>
-          </template>
-          <tr><td></td><td>sss</td><td>sss</td><td>sss</td><td>sss</td><td>sss</td><td>sss</td><td>sss</td></tr>
-        </MyTable>
+        <MyTable :data="dataSource" :columns="columns"/>
         <MyTableFoot></MyTableFoot>
       </div>
     </div>
@@ -27,20 +16,55 @@
 </template>
 
 <script>
+require("es6-promise").polyfill();
+require('isomorphic-fetch'); 
 import Mycrumb from '../components/Mycrumb.vue'
 import MyTable from '../components/MyTable.vue'
 import MyTableFoot from '../components/MyTableFoot.vue'
+import { columns } from '@/utils'
 export default {
   name: 'Situation',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      status: 'ACTIVE',
+      globalParams:{
+        page : 1,//当前页码
+        pageSize : 10,    //每页条数
+        totalPageCount : 0,//总页数
+        param : '',//参数
+        sort : 'desc' //排序
+      },
+      dataSource: [],
+      columns,
     }
+  },
+  created() {
+
+    // this.$nextTick(function(){
+        var param = this.globalParams.param + "&offset=" + (this.globalParams.page-1)*this.globalParams.pageSize+ "&limit=" + this.globalParams.pageSize + "&sort=" +this. globalParams.sort;
+        var req_url = this.COMMON._CTX_GATEWAY_URL + "data-biz/situations/ri/"+this.COMMON._CTX_OWNER+"?status="+ this.status +"&"+this.COMMON._CTX_TOKEN  + param;
+        fetch(req_url, {
+          method: "GET",
+          mode: "cors",
+          credentials: 'include',
+        }).then((res) => res.json()).then((data) => {
+          if (data.result === 'success') {
+            this.dataSource = data.data;
+          } else {
+            console.log(data.message || data.result);
+          }
+        })
+    // })
   },
   components: {
     Mycrumb,
     MyTable,
     MyTableFoot
+  },
+  methods: {
+    loadData(callback){
+      
+    }
   }
 }
 </script>

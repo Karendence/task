@@ -2,34 +2,45 @@
     <table class="table table-striped content-table">
       <thead>
         <tr>
-          <th></th>
-          <slot name="th"></slot>
+          <th v-for="(item, index) in columns" :key="index">
+            {{ item.title }}
+          </th>
         </tr>
       </thead>
       <tbody>
-        <slot></slot>
+        <tr v-for="(item, index1) in data" :key="index1">
+          <td v-for="(column, index2) in columns" :key="index2" v-html="getRecord(column, item)">
+          </td>
+        </tr>
       </tbody>
     </table>
 </template>
 
 <script>
 export default {
-  name: 'Mycrumb',
+  name: 'MyTable',
   data () {
     return {
-      firstPart: this.firstData,
-      secondPart: this.secondData
     }
   },
   props: {
-    firstData: {
-      type: Boolean,
-      required: false
+    columns: {
+      type: Array,
+      required: false,
+      default: [],
     },
-    secondData: {
-      type: Boolean,
-      required: false
+    data: {
+      type: Array,
+      required: true,
     }
+  },
+  methods: {
+    getRecord(col, record) {
+      if (col.render) {
+        return col.render(record, record[col.key]);
+      }
+      return record[col.key];
+    },
   }
 }
 </script>

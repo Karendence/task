@@ -37,7 +37,7 @@ export default {
   name: 'App',
   data () {
     return {
-    //   sss: this.COMMON.ucidUrl
+      sss: this.COMMON.ucidUrl
     }
   },
   components: {

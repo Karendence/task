@@ -5,7 +5,7 @@
     </Mycrumb>
     <div class="main-list col-lg-12">
     <LeftPart :ruleStatus = "ruleStatus" v-on:NewRuleA="NewRuleA">
-      <ListItem v-on:loadSingle="loadSingle" name="测试">的滴滴</br>djhfjkdshfkhas</ListItem>
+      <ListItem v-on:loadSingle="loadSingle" name="测试">的滴滴</br>{{sss}}</ListItem>
     </LeftPart>
     <NosituationRule v-if="isEmpty">
     </NosituationRule>
@@ -33,7 +33,8 @@ export default {
   data () {
     return {
       isEmpty: false,
-      ruleStatus: 1
+      ruleStatus: 1,
+      sss: this.COMMON.ucidUrl
     }
   },
   components: {

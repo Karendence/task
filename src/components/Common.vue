@@ -1,6 +1,6 @@
 <script type="text/javascript">
 // 本地调的时候要加的
-const contextPathT = 'http://10.128.5.211/'
+const contextPathT = 'http://c.onealert.com/'
 // const contextPathT="http://ci5.test.onealert.com/";
 const bodyStyle = 'bodyOrange'
 // UserDTO ssoUser=(UserDTO)SSOClient.getLogin(request);
@@ -16,7 +16,26 @@ const bodyStyle = 'bodyOrange'
 // if (photo==null || "".equalsIgnoreCase(photo) || "null".equalsIgnoreCase(photo)) {
 //   photo = "/console/ucid/img/defaultImg.png";
 // }
+//先写死的内容
+const _CTX_OWNER= '374789707'
+const _USER = '3186c8ae-75a1-4213-a441-d8bbe595e4d5'
+const _USER_NAME = '党小润'
+const _MY_UCID_URL = 'http://c.onealert.com/ucid/';
+const _CURRENTMenu = '"alert"';
+const _SOURCE = '';
+const _ITSM_CONSOLE_PATH= 'http://c.onealert.com/';
+const _IS_OWNER = 'true';
+const _EXPIRED_TIME = '0';
+const _IS_EXPIRED = 'false';
+const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_ed19810e-558b-4597-bd48-f4b8d2ffeb03'
 
+// const phoneError = ssoUser.getPhoneError();
+// 获取用户头像
+// const photo = ssoUser.getPhoto();
+// if (photo==null || "".equalsIgnoreCase(photo) || "null".equalsIgnoreCase(photo)) {
+//   photo = "/console/ucid/img/defaultImg.png";
+// }
+const photo = '/console/ucid/img/defaultImg.png'
 // ITSM页面链接
 const ucidUrl = contextPathT + 'ucid/'
 const itsmConsolePath = contextPathT
@@ -40,6 +59,7 @@ const _CTX_GATEWAY_URL = itsmConsolePath
 const _CTX_COOPERATION_URL = _CTX_GATEWAY_URL + 'cooperation/cooperationapp/'
 const _CTX_DEPLOY_TYPE = 'saas'
 const licenseType = 'free'
+
 // const expiredTime=ssoUser.getLicenseExpiredTime();
 // const nowTime=System.currentTimeMillis();
 // const isExpired = ssoUser.getExpired();
@@ -74,6 +94,17 @@ export default
   _CTX_GATEWAY_URL,
   _CTX_COOPERATION_URL,
   _CTX_DEPLOY_TYPE,
-  licenseType
+  licenseType,
+  _USER,
+  _USER_NAME,
+  _MY_UCID_URL,
+  _CURRENTMenu,
+  _SOURCE,
+  _ITSM_CONSOLE_PATH,
+  _IS_OWNER,
+  _EXPIRED_TIME,
+  _IS_EXPIRED,
+  _CTX_TOKEN,
+  _CTX_OWNER
 }
 </script>
