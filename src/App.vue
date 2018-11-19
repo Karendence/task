@@ -3,9 +3,9 @@
         <Layout>
             <Myheader></Myheader>
             <Layout>
-                <Sider hide-trigger :style="{background: '#fff'}">
+<!--                 <Sider hide-trigger :style="{background: '#fff'}">
                     <Mymenu></Mymenu>
-                </Sider>
+                </Sider> -->
                 <Layout :style="{padding: '0 24px 24px'}">
                     <Mybreadcrumb>
                     </Mybreadcrumb>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import Mybreadcrumb from './components/Mybreadcrumb.vue'
-import Mymenu from './components/Mymenu.vue'
-import Myheader from './components/Myheader.vue'
+import Mybreadcrumb from './components/layout/Mybreadcrumb.vue'
+import Mymenu from './components/layout/Mymenu.vue'
+import Myheader from './components/layout/Myheader.vue'
 import {
     Button,
     Layout,

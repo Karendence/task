@@ -1,4 +1,5 @@
-const columns = [{
+//场景表头
+const situationCol = [{
     title: '',
     key: 'operation',
     render: () => {
@@ -30,6 +31,46 @@ const columns = [{
     key: 'id',
 }];
 
+//告警表头
+const AlarmCol = [{
+    title: '',
+    key: 'operation',
+    render: () => {
+        return '';
+    }
+}, {
+    title: '发生时间',
+    key: 'creationTime'
+}, {
+    title: '告警内容',
+    key: 'alarmContent'
+}, {
+    title: '主机',
+    key: 'host'
+}, {
+    title: '告警对象',
+    key: 'entityName'
+}, {
+    title: '分派人',
+    key: 'contactNames',
+    render: (record,text)=>{
+        var str;
+        $.each(text,function(index,item){
+            if(index<text.length-1){
+                str+=text[i]+"、";
+            }else{
+                str+=text[i];
+            }
+        });
+        debugger;
+        return `<span></span>`
+    }
+}, {
+    title: '分类',
+    key: 'alarmCount'
+}];
+
 module.exports = {
-    columns
+    situationCol,
+    AlarmCol
 }

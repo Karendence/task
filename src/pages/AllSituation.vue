@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Mycrumb from '../components/Mycrumb.vue'
+import Mycrumb from '../components/layout/Mycrumb.vue'
 import MyTable from '../components/MyTable.vue'
 import MyTableFoot from '../components/MyTableFoot.vue'
 export default {

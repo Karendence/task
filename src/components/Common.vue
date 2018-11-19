@@ -27,7 +27,7 @@ const _ITSM_CONSOLE_PATH= 'http://c.onealert.com/';
 const _IS_OWNER = 'true';
 const _EXPIRED_TIME = '0';
 const _IS_EXPIRED = 'false';
-const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_ed19810e-558b-4597-bd48-f4b8d2ffeb03'
+const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_978a4f9d-f8aa-4357-8797-8647fcd0d2b2#'
 
 // const phoneError = ssoUser.getPhoneError();
 // 获取用户头像
@@ -53,6 +53,7 @@ const _CTX_CONSOLE_URL = itsmConsolePath + 'console'
 // String _CTX_CONSOLE_URL =itsmConsolePath;
 const _CTX_CHARGE_URL = itsmConsolePath + 'itsm-charge/api/'
 const _CTX_UCENTER_URL = itsmConsolePath + 'ucid/api/'
+const _CTX_ALERT_URL=itsmConsolePath+'alert/'
 // 本地测试
 // const _CTX_GATEWAY_URL = com.upyoo.common.util.UtilProperties.getVariable("menu.gateway.url.public");
 const _CTX_GATEWAY_URL = itsmConsolePath
@@ -105,6 +106,7 @@ export default
   _EXPIRED_TIME,
   _IS_EXPIRED,
   _CTX_TOKEN,
-  _CTX_OWNER
+  _CTX_OWNER,
+  _CTX_ALERT_URL
 }
 </script>

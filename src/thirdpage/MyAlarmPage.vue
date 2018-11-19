@@ -1,14 +1,8 @@
 <template>
   <div class="hello">
-    <Mycrumb firstData="工作台" secondData="我的场景"> 
-      <select class="form-control choose-type">
-        <option value="ACTIVE">打开的场景</option>
-        <option value="CLOSED">关闭的场景</option>
-      </select>
-    </Mycrumb>
     <div class="main-list">
       <div class="search-result">
-        <MyTable :data="dataSource" :columns="columns"/>
+        <MyTable :data="dataSource" :columns="AlarmCol"/>
         <MyTableFoot></MyTableFoot>
       </div>
     </div>
@@ -21,9 +15,9 @@ require('isomorphic-fetch');
 import Mycrumb from '../components/layout/Mycrumb.vue'
 import MyTable from '../components/MyTable.vue'
 import MyTableFoot from '../components/MyTableFoot.vue'
-import { situationCol } from '@/utils'
+import { AlarmCol } from '@/utils'
 export default {
-  name: 'Situation',
+  name: 'MyAlarmPage',
   data () {
     return {
       status: 'ACTIVE',
@@ -35,14 +29,42 @@ export default {
         sort : 'desc' //排序
       },
       dataSource: [],
-      columns,
+      AlarmCol,
     }
   },
   created() {
-
-    // this.$nextTick(function(){
-        var param = this.globalParams.param + "&offset=" + (this.globalParams.page-1)*this.globalParams.pageSize+ "&limit=" + this.globalParams.pageSize + "&sort=" +this. globalParams.sort;
-        var req_url = this.COMMON._CTX_GATEWAY_URL + "data-biz/situations/ri/"+this.COMMON._CTX_OWNER+"?status="+ this.status +"&"+this.COMMON._CTX_TOKEN  + param;
+        var target_url =this.COMMON._CTX_ALERT_URL
+        switch(this.querytype)
+        {
+        case 'all':
+          target_url += "api/alert/";
+          break;
+        case 'aActive':
+          target_url += "api/alert/?pending=active";
+          break;
+        case 'aAck':
+          target_url += "api/alert/?status=ACK";
+          break;
+        case 'aClosed':
+          target_url += "api/alert/?status=CLOSED&activeCount=0";
+          break;
+        case 'mine':
+          target_url += "api/alert/assigned/";
+          break;
+        case 'mActive':
+          target_url += "api/alert/assigned/?pending=active";
+          break;
+        case 'mAck':
+          target_url += "api/alert/assigned/?status=ACK";
+          break;
+        case 'mClosed':
+          target_url += "api/alert/assigned/?status=CLOSED&activeCount=0";
+          break;
+        default:
+          target_url += "api/alert/";
+        }
+        var params = "&page=" + (this.globalParams.page || 1) + "&rows=" +this.globalParams.pageSize + "&time=week";
+        var req_url =target_url+ params +"&"+this.COMMON._CTX_TOKEN;
         fetch(req_url, {
           method: "GET",
           mode: "cors",
@@ -54,7 +76,6 @@ export default {
             console.log(data.message || data.result);
           }
         })
-    // })
   },
   components: {
     Mycrumb,
@@ -62,8 +83,11 @@ export default {
     MyTableFoot
   },
   methods: {
-    loadData(callback){
-      
+  },
+  props: {
+    querytype: {
+      type: String,
+      require: false
     }
   }
 }
@@ -91,8 +115,8 @@ select.choose-type {
 }
 /*下面的表格*/
 .main-list {
-    margin-top: 50px;
-    width: 99%;
+/*    margin-top: 50px;
+*/    width: 99%;
     margin-left: 5px;
     border: 1px solid #e6e3e3;
     border-radius: 0px;

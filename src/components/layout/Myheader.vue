@@ -76,7 +76,7 @@ a {
   color: #42b983;
 }
 .navbar-brand{
-  background: url("../assets/images/alert_logo.png") no-repeat;
+  background: url("../../assets/images/alert_logo.png") no-repeat;
   background-size: contain;
   width: 87px;
   height: 40px;

@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import Mycrumb from '../components/Mycrumb.vue'
+import Mycrumb from '../components/layout/Mycrumb.vue'
 import LeftPart from '../components/LeftPart.vue'
 import RightPart from '../components/RightPart.vue'
 import NosituationRule from '../components/NosituationRule.vue'

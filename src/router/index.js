@@ -6,6 +6,7 @@ import Situation from '@/pages/Situation'
 import AllSituation from '@/pages/AllSituation'
 import SituationRule from '@/pages/SituationRule'
 import MyPending from '@/pages/MyPending'
+import Dashboard from '@/pages/Dashboard'
 Vue.use(Router)
 if(!window.Promise){
     window.Promise = Promise;
@@ -36,6 +37,11 @@ export default new Router({
       // 地址
       path: '/MyPending',
       component: MyPending
+    },
+    {
+      // 地址
+      path: '/dashboard',
+      component: Dashboard
     }
   ]
 })

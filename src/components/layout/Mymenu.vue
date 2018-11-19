@@ -4,7 +4,7 @@
                 <FirstClassMenu :isOpenProps="true" slot="title">
                   <i class="fa fa-fw fa-gear"></i> 
                   工作台
-                  <img src="../assets/images/new.png" style="height: 25px;margin-top: -2px!important;margin-left: 15px;" />
+                  <img src="../../assets/images/new.png" style="height: 25px;margin-top: -2px!important;margin-left: 15px;" />
                 </FirstClassMenu>
               <MenuItem name="mysitu">
                 <router-link to="/situation" id="menu-par-mysituation" >我的场景

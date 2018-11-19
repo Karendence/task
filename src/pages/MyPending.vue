@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import Mycrumb from '../components/Mycrumb.vue'
+import Mycrumb from '../components/layout/Mycrumb.vue'
 import LeftBlank from '../components/LeftBlank.vue'
 import RightBlank from '../components/RightBlank.vue'
 import noAlert from '../components/noAlert.vue'
