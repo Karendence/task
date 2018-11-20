@@ -54,16 +54,8 @@ const AlarmCol = [{
     title: '分派人',
     key: 'contactNames',
     render: (record,text)=>{
-        var str;
-        $.each(text,function(index,item){
-            if(index<text.length-1){
-                str+=text[i]+"、";
-            }else{
-                str+=text[i];
-            }
-        });
-        debugger;
-        return `<span></span>`
+        var str=text.join(",");
+        return `<span>${str}</span>`
     }
 }, {
     title: '分类',

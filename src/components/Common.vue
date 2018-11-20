@@ -27,7 +27,7 @@ const _ITSM_CONSOLE_PATH= 'http://c.onealert.com/';
 const _IS_OWNER = 'true';
 const _EXPIRED_TIME = '0';
 const _IS_EXPIRED = 'false';
-const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_978a4f9d-f8aa-4357-8797-8647fcd0d2b2#'
+const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_b07124d8-3c8b-47a3-b5a3-22b082a42b4f'
 
 // const phoneError = ssoUser.getPhoneError();
 // 获取用户头像

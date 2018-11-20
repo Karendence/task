@@ -54,4 +54,24 @@ thead {
     font-weight: normal;
     font-size: 14px!important;
 }
+td{
+    font-size: 13px!important;
+}
+table tbody {  
+    display:block;  
+    height:500px;  
+    overflow-y:scroll;  
+}  
+  
+  
+table thead, tbody tr {  
+    display:table;  
+    width:100%;  
+    table-layout:fixed;  
+}  
+  
+  
+table thead {  
+    width: calc( 100% - 1em )  
+} 
 </style>

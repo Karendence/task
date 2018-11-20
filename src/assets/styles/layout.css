@@ -77,3 +77,6 @@ html,body{
 	font-family: SimHei;
 	src: url('../fonts/simhei.ttf');
 }
+.whitebg{
+	position: relative;
+}
