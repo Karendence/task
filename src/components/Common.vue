@@ -20,14 +20,14 @@ const bodyStyle = 'bodyOrange'
 const _CTX_OWNER= '374789707'
 const _USER = '3186c8ae-75a1-4213-a441-d8bbe595e4d5'
 const _USER_NAME = '党小润'
-const _MY_UCID_URL = 'http://c.onealert.com/ucid/';
-const _CURRENTMenu = '"alert"';
-const _SOURCE = '';
-const _ITSM_CONSOLE_PATH= 'http://c.onealert.com/';
-const _IS_OWNER = 'true';
-const _EXPIRED_TIME = '0';
-const _IS_EXPIRED = 'false';
-const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_b07124d8-3c8b-47a3-b5a3-22b082a42b4f'
+const _MY_UCID_URL = 'http://c.onealert.com/ucid/'
+const _CURRENTMenu = '"alert"'
+const _SOURCE = ''
+const _ITSM_CONSOLE_PATH= 'http://c.onealert.com/'
+const _IS_OWNER = 'true'
+const _EXPIRED_TIME = '0'
+const _IS_EXPIRED = 'false'
+const _CTX_TOKEN = 'UPYOO_TOKEN=itsmTK_3266d363-50ca-40e2-a97d-6403fe599fda#'
 
 // const phoneError = ssoUser.getPhoneError();
 // 获取用户头像
